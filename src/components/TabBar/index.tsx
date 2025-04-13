@@ -8,13 +8,13 @@ const TabBar: React.FC = () => {
   const tabs = [
     { path: '/about', label: 'About', icon: '👤' },
     { path: '/resume', label: 'Resume', icon: '📄' },
-    { path: '/project', label: 'Project', icon: '💼' },
+    { path: '/projects', label: 'Project', icon: '💼' },
     { path: '/contact', label: 'Contact', icon: '📞' },
   ];
 
   return (
     <div className="tabbar">
-      {tabs.map((tab) => (
+      {tabs.map(tab => (
         <Link
           key={tab.path}
           to={tab.path}
@@ -28,4 +28,4 @@ const TabBar: React.FC = () => {
   );
 };
 
-export default TabBar; 
+export default TabBar;
