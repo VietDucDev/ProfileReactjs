@@ -10,16 +10,16 @@ const About = lazy(() => import('../pages/About'));
 const AdminDashboard = lazy(() => import('../pages/AdminDashboard'));
 const Login = lazy(() => import('../pages/Login'));
 const Resume = lazy(() => import('../pages/Resume/index'));
-const Project = lazy(() => import('../pages/Projects'));
+const Projects = lazy(() => import('../pages/Projects'));
 const Contact = lazy(() => import('../pages/Contact'));
 
 export interface AppRoute {
-    path: string;
-    element?: React.ReactNode;
-    layout?: React.ReactNode;
-    children?: AppRoute[];
-    requiresAuth?: boolean;
-    title?: string;
+  path: string;
+  element?: React.ReactNode;
+  layout?: React.ReactNode;
+  children?: AppRoute[];
+  requiresAuth?: boolean;
+  title?: string;
 }
 
 export const routesConfig: AppRoute[] = [
@@ -32,15 +32,16 @@ export const routesConfig: AppRoute[] = [
     layout: <DefaultLayout />,
     children: [
       { path: 'about', element: <About />, title: 'Viet Duc | Portfolio | About' },
+      { path: '/resume', element: <Resume />, title: 'Viet Duc | Portfolio | Resume' },
+      { path: '/projects', element: <Projects />, title: 'Viet Duc | Portfolio | Projects' },
+      { path: '/contact', element: <Contact />, title: 'Viet Duc | Portfolio | Contact' },
     ],
   },
   {
     path: '/admin',
     layout: <AdminLayout />,
     requiresAuth: true,
-    children: [
-      { path: '', element: <AdminDashboard />, title: 'Admin Dashboard' },
-    ],
+    children: [{ path: '', element: <AdminDashboard />, title: 'Admin Dashboard' }],
   },
   {
     path: '/login',
@@ -48,23 +49,8 @@ export const routesConfig: AppRoute[] = [
     title: 'Login',
   },
   {
-    path: '/resume',
-    element: <Resume />,
-    title: 'Viet Duc | Portfolio | Resume'
-  },
-  {
-    path: '/project',
-    element: <Project />,
-    title: 'Viet Duc | Portfolio | Projects'
-  },
-  {
-    path: '/contact',
-    element: <Contact />,
-    title: 'Viet Duc | Portfolio | Contact'
-  },
-  {
     path: '*',
     element: <NotFound />,
     title: '404 - Page Not Found',
   },
-]; 
+];
