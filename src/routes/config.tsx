@@ -31,7 +31,7 @@ export const routesConfig: AppRoute[] = [
     path: '/',
     layout: <DefaultLayout />,
     children: [
-      { path: 'about', element: <About />, title: 'About' },
+      { path: 'about', element: <About />, title: 'Viet Duc | Portfolio | About' },
     ],
   },
   {
@@ -50,17 +50,17 @@ export const routesConfig: AppRoute[] = [
   {
     path: '/resume',
     element: <Resume />,
-    title: 'My Resume'
+    title: 'Viet Duc | Portfolio | Resume'
   },
   {
     path: '/project',
     element: <Project />,
-    title: 'My Projects'
+    title: 'Viet Duc | Portfolio | Projects'
   },
   {
     path: '/contact',
     element: <Contact />,
-    title: 'Contact Me'
+    title: 'Viet Duc | Portfolio | Contact'
   },
   {
     path: '*',

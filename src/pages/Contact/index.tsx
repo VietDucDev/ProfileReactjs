@@ -1,9 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 const Contact: React.FC = () => {
-  useEffect(() => {
-    document.title = 'Viet Duc | Portfolio | Contact';
-  }, []);
+
   return (
     <div className="page-content">
       <h1>Contact Me</h1>

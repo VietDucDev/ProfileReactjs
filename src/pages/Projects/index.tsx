@@ -1,9 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 const Projects: React.FC = () => {
-  useEffect(() => {
-    document.title = 'Viet Duc | Portfolio | Projects';
-  }, []);
+  
   return (
     <div className="page-content">
       <h1>My Projects</h1>

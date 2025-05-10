@@ -3,6 +3,7 @@ import styles from "./Resume.module.css";
 
 
 const Resume: React.FC = () => {
+  
   return (
     <div>resume</div>
   );
